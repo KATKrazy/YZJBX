@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.suning:suning-sdk-java-beta:20150914">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/suning/suning-sdk-java-beta/20150914/suning-sdk-java-beta-20150914.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/suning/suning-sdk-java-beta/20150914/suning-sdk-java-beta-20150914-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/suning/suning-sdk-java-beta/20150914/suning-sdk-java-beta-20150914-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

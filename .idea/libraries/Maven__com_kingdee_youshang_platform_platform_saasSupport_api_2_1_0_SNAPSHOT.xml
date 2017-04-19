@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.kingdee.youshang.platform:platform-saasSupport-api:2.1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/kingdee/youshang/platform/platform-saasSupport-api/2.1.0-SNAPSHOT/platform-saasSupport-api-2.1.0-20170412.074001-80.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/kingdee/youshang/platform/platform-saasSupport-api/2.1.0-SNAPSHOT/platform-saasSupport-api-2.1.0-20170412.074001-80-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/kingdee/youshang/platform/platform-saasSupport-api/2.1.0-SNAPSHOT/platform-saasSupport-api-2.1.0-20170412.074001-80-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

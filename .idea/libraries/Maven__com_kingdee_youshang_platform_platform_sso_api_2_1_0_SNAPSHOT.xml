@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.kingdee.youshang.platform:platform-sso-api:2.1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/kingdee/youshang/platform/platform-sso-api/2.1.0-SNAPSHOT/platform-sso-api-2.1.0-20161010.105152-1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/kingdee/youshang/platform/platform-sso-api/2.1.0-SNAPSHOT/platform-sso-api-2.1.0-20161010.105152-1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/kingdee/youshang/platform/platform-sso-api/2.1.0-SNAPSHOT/platform-sso-api-2.1.0-20161010.105152-1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

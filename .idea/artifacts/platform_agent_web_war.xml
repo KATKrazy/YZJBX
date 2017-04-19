@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="platform-agent-web:war">
+    <output-path>E:/luke_service/platform-agent-web/target</output-path>
+    <root id="archive" name="agent.war">
+      <element id="artifact" artifact-name="platform-agent-web:war exploded" />
+    </root>
+  </artifact>
+</component>

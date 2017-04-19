@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.kingdee.youshang.platform:platform-basedata-api:2.1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/kingdee/youshang/platform/platform-basedata-api/2.1.0-SNAPSHOT/platform-basedata-api-2.1.0-20170223.024304-15.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/kingdee/youshang/platform/platform-basedata-api/2.1.0-SNAPSHOT/platform-basedata-api-2.1.0-20170223.024304-15-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/kingdee/youshang/platform/platform-basedata-api/2.1.0-SNAPSHOT/platform-basedata-api-2.1.0-20170223.024304-15-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
