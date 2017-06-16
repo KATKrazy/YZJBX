@@ -14,15 +14,6 @@
       <change type="MODIFICATION" beforePath="E:/luke_service/platform-agent-web/src/main/resources/log4j.properties" afterPath="E:/luke_service/platform-agent-web/src/main/resources/log4j.properties" />
       <change type="MODIFICATION" beforePath="E:/luke_service/platform-agent-web/src/main/resources/spring-context-config.xml" afterPath="E:/luke_service/platform-agent-web/src/main/resources/spring-context-config.xml" />
       <change type="MODIFICATION" beforePath="E:/luke_service/platform-agent-web/src/main/webapp/META-INF/MANIFEST.MF" afterPath="E:/luke_service/platform-agent-web/src/main/webapp/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kat/action/HandleAction.java" afterPath="$PROJECT_DIR$/src/main/java/com/kat/action/HandleAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kat/service/YZJExportService.java" afterPath="$PROJECT_DIR$/src/main/java/com/kat/service/YZJExportService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kat/service/YZJLoginService.java" afterPath="$PROJECT_DIR$/src/main/java/com/kat/service/YZJLoginService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kat/util/ExportTools.java" afterPath="$PROJECT_DIR$/src/main/java/com/kat/util/ExportTools.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/struts-config.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/struts-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yzjbx.iml" afterPath="$PROJECT_DIR$/yzjbx.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="E:/luke_service/platform-agent-web/target/" />
@@ -991,12 +982,12 @@
       <workItem from="1492482202193" duration="5763000" />
       <workItem from="1492501472758" duration="576000" />
       <workItem from="1492566869152" duration="3014000" />
-      <workItem from="1497599720058" duration="36000" />
+      <workItem from="1497599720058" duration="65000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13108000" />
+    <option name="totallyTimeSpent" value="13137000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
