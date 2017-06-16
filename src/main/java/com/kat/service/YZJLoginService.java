@@ -8,15 +8,19 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
+import org.json.JSONObject;
 import org.springframework.stereotype.Service;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class YZJLoginService {
 
-    public boolean login(CloseableHttpClient httpclient, String email, String password) throws Exception {
+    public YZJLoginService() {}
+
+    public String login(CloseableHttpClient httpclient, String email, String password) throws Exception {
         String loginUrl = "http://yunzhijia.com/space/c/rest/user/login";
 
         HttpPost httppost = new HttpPost(String.valueOf(loginUrl));
@@ -38,11 +42,14 @@ public class YZJLoginService {
         String entityStr = EntityUtils.toString(entity);
         if(entityStr.contains("\"success\":false")) {
             System.out.println("云之家登录失败");
-            return false;
+            return "";
         }
         if(entity !=null){
             System.out.println("登录Response content: " + entityStr);
+
         }
-        return true;
+        JSONObject json = new JSONObject(entityStr);
+        String id = json.getJSONObject("user").getString("id");
+        return id;
     }
 }

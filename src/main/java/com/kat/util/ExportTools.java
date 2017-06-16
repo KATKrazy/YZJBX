@@ -173,14 +173,22 @@ public class ExportTools {
             String cell = data[j];
             String name = data[3];
             String date = data[4];
-            String startTime = data[12];
-            String endTime = data[14];
-            String totalTime = data[26];
+            String startTime = data[18];//22
+            String endTime = data[20];//24
+            String totalTime = data[34];
             if(!startTime.contains(":")) {
-                startTime = "0:00";
+                if(startTime.contains("--")) {
+                    startTime = data[22];
+                }else {
+                    startTime = "0:00";
+                }
             }
             if(!endTime.contains(":")) {
-                endTime = "0:00";
+                if(endTime.contains("--")) {
+                    endTime = data[24];
+                }else {
+                    endTime = "0:00";
+                }
             }
             String endTimeHour = endTime.split(":")[0];
             int endTimeHourI = Integer.parseInt(endTimeHour);
@@ -194,19 +202,22 @@ public class ExportTools {
                 usedDatas[i1][j++] = totalTime;
                 usedDatas[i1][j++] = "15";
                 if(endTimeHourI >= 21) {
-                    usedDatas[i1][j++] = "15";
+                    //usedDatas[i1][j++] = "15";
                 }
                 i1++;
-            }else if((date.contains("周六") || date.contains("周日")) && totalTimeB >= 4D) {
+            }else if((date.contains("周六") || date.contains("周日")) && totalTimeB >= 2D) {
                 j = 0;
                 usedDatas[i1][j++] = name;
                 usedDatas[i1][j++] = date;
                 usedDatas[i1][j++] = startTime;
                 usedDatas[i1][j++] = endTime;
                 usedDatas[i1][j++] = totalTime;
-                usedDatas[i1][j++] = "15";
+                usedDatas[i1][j] = "";
+                if(totalTimeB >= 4D) {
+                    usedDatas[i1][j] = "15";
+                }
                 if(totalTimeB >= 8D) {
-                    usedDatas[i1][--j] = "30";
+                    usedDatas[i1][j] = "30";
                 }
                 usedDatas[i1][9] = "周末加班";
                 i1++;

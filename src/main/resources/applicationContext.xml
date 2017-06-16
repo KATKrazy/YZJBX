@@ -15,12 +15,6 @@
         <property name="configLocation" value="classpath:mybatis-config.xml" />
     </bean>
 
-    <!--<aop:config>-->
-        <!--<aop:aspect ref="aop2">-->
-            <!--<aop:before method="bef" pointcut="execution(* com.kat.service.YZJLoginService.login(..))" />-->
-        <!--</aop:aspect>-->
-    <!--</aop:config>-->
-
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
         <property name="driverClass" value="com.mysql.jdbc.Driver" />
         <property name="jdbcUrl" value="jdbc:mysql://112.74.107.62:3306/mydb?useUnicode=true&amp;characterEncoding=UTF-8" />
@@ -87,8 +81,6 @@
 
         </property>
     </bean>
-    <!--<context:component-scan base-package="com.kat.*" />-->
-    <!--<bean id="aop2" class="com.kat.util.aop2" />-->
-    <!--<bean id="login" class="com.kat.service.YZJLoginService" />-->
-    <aop:aspectj-autoproxy />
+    <context:component-scan base-package="com.kat.*" />
+    <bean id="login" class="com.kat.service.YZJLoginService" />
 </beans>

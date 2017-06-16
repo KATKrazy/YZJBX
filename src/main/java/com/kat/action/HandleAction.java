@@ -8,21 +8,15 @@ import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.net.URLEncoder;
 
-public class HandleAction extends Action{
+public class HandleAction extends Action {
 
-    CloseableHttpClient httpclient = HttpClients.createDefault();
-
-    public HandleAction() {
-        System.out.println("HandleAction");
-    }
+    private CloseableHttpClient httpclient = HttpClients.createDefault();
 
     @Override
     public ActionForward execute(ActionMapping mapping, ActionForm form,
@@ -35,13 +29,13 @@ public class HandleAction extends Action{
         String endDate = request.getParameter("endDate");
 
         YZJLoginService yzjLoginService = new YZJLoginService();
-        boolean loginSuccess = yzjLoginService.login(httpclient, email, password);
-        if(!loginSuccess) {
+        String id = yzjLoginService.login(httpclient, email, password);
+        if("".equals(id)) {
             response.getWriter().write("login failed!check the username and password");
             return null;
         }
         YZJExportService export = new YZJExportService();
-        String path = export.export(httpclient, email, startDate, endDate);
+        String path = export.export(httpclient, email, startDate, endDate, id);
 
         response.setContentType("application/x-msdownload; charset=utf-8");
         response.setHeader("content-disposition", "attachment;filename=" + URLEncoder.encode(email + startDate + endDate + ".csv", "gbk"));

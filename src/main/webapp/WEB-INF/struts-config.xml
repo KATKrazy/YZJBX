@@ -6,5 +6,8 @@
 		<action path="/ys/post"
 				type="com.kat.action.HandleAction"/>
 
+		<action path="/upload"
+				type="com.kat.action.UploadAction"/>
+
 	</action-mappings>
 </struts-config>
