@@ -1,5 +1,7 @@
 package com.kat.service;
 
+import com.alibaba.fastjson.JSON;
+import com.kat.util.GetConfigUtil;
 import org.apache.http.HttpEntity;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
@@ -8,10 +10,9 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
-import org.json.JSONObject;
+import com.alibaba.fastjson.JSONObject;
 import org.springframework.stereotype.Service;
 
-import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,7 +22,7 @@ public class YZJLoginService {
     public YZJLoginService() {}
 
     public String login(CloseableHttpClient httpclient, String email, String password) throws Exception {
-        String loginUrl = "http://yunzhijia.com/space/c/rest/user/login";
+        String loginUrl = GetConfigUtil.getProMap().get("loginUrl");
 
         HttpPost httppost = new HttpPost(String.valueOf(loginUrl));
 
@@ -48,7 +49,7 @@ public class YZJLoginService {
             System.out.println("登录Response content: " + entityStr);
 
         }
-        JSONObject json = new JSONObject(entityStr);
+        JSONObject json = JSON.parseObject(entityStr);
         String id = json.getJSONObject("user").getString("id");
         return id;
     }

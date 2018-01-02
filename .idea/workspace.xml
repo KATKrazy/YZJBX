@@ -426,7 +426,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="F:/spring boot/SpringBoot-Learning/Chapter3-1-2" />
     <property name="settings.editor.selected.configurable" value="vcs.Subversion" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -982,12 +982,12 @@
       <workItem from="1492482202193" duration="5763000" />
       <workItem from="1492501472758" duration="576000" />
       <workItem from="1492566869152" duration="3014000" />
-      <workItem from="1497599720058" duration="65000" />
+      <workItem from="1497599720058" duration="273000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13137000" />
+    <option name="totallyTimeSpent" value="13345000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />

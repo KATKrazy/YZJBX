@@ -4,6 +4,7 @@ import com.csvreader.CsvReader;
 import com.csvreader.CsvWriter;
 import org.apache.commons.compress.archivers.ArchiveEntry;
 import org.apache.commons.compress.archivers.zip.ZipArchiveInputStream;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.*;
 import java.nio.charset.Charset;
@@ -14,6 +15,12 @@ import java.util.List;
  * Created by kingdee on 2017/4/17.
  */
 public class ExportTools {
+
+    private static final int nameIndex = Integer.parseInt(GetConfigUtil.getProMap().get("name"));
+    private static final int dateIndex = Integer.parseInt(GetConfigUtil.getProMap().get("date"));
+    private static final int startTimeIndex = Integer.parseInt(GetConfigUtil.getProMap().get("startTime"));
+    private static final int endTimeIndex = Integer.parseInt(GetConfigUtil.getProMap().get("endTime"));
+    private static final int totalTimeIndex = Integer.parseInt(GetConfigUtil.getProMap().get("totalTime"));
 
     /**
      * 读取csv
@@ -171,11 +178,11 @@ public class ExportTools {
             //for (int j = 0; j < data.length; j++) {
             j = 0;
             String cell = data[j];
-            String name = data[3];
-            String date = data[4];
-            String startTime = data[18];//22
-            String endTime = data[20];//24
-            String totalTime = data[34];
+            String name = data[nameIndex];
+            String date = data[dateIndex];
+            String startTime = data[startTimeIndex];//22
+            String endTime = data[endTimeIndex];//24
+            String totalTime = data[totalTimeIndex];
             if(!startTime.contains(":")) {
                 if(startTime.contains("--")) {
                     startTime = data[22];

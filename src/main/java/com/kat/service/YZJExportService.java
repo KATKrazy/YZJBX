@@ -1,6 +1,7 @@
 package com.kat.service;
 
 import com.kat.util.ExportTools;
+import com.kat.util.GetConfigUtil;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
@@ -11,7 +12,7 @@ import java.io.*;
 public class YZJExportService {
 
     public String export(CloseableHttpClient httpclient, String email, String startDate, String endDate, String id) throws Exception {
-        String exportUrl = "http://yunzhijia.com/attendance/export/zipFile?deptId=f46abbf3-5228-482a-8319-c6c70d7b647a&userId=" +
+        String exportUrl = GetConfigUtil.getProMap().get("exportUrl") + "?deptId=f46abbf3-5228-482a-8319-c6c70d7b647a&userId=" +
                 id + "&status=&startDate=" + startDate + "&endDate=" + endDate +
                 "&isIncludeChild=true&cvsTypeStr=personalExport%2CpersonalDetailsExport";
 
@@ -31,7 +32,8 @@ public class YZJExportService {
          */
         String fileName = email + System.currentTimeMillis();
         //ZipOutputStream zos = new ZipOutputStream(new FileOutputStream(fileName));
-        DataOutputStream outZip = new DataOutputStream(new FileOutputStream("/usr/local/bxdatas/" + fileName + ".zip"));
+        //DataOutputStream outZip = new DataOutputStream(new FileOutputStream("/usr/local/bxdatas/" + fileName + ".zip"));
+        DataOutputStream outZip = new DataOutputStream(new FileOutputStream("D:\\beifen\\" + fileName + ".zip"));
         //zos.setEncoding("GBK");
         byte[] buffer1 = new byte[8192];
         int count = 0;
@@ -40,8 +42,10 @@ public class YZJExportService {
         }
         outZip.close();
         System.out.println("解压准备开始");
-        String path = "/usr/local/bxdatas/" + fileName + "/";
-        ExportTools.unzip("/usr/local/bxdatas/" + fileName + ".zip", path);
+        //String path = "/usr/local/bxdatas/" + fileName + "/";
+        String path = "D:\\beifen\\" + fileName + "/";
+        //ExportTools.unzip("/usr/local/bxdatas/" + fileName + ".zip", path);
+        ExportTools.unzip("D:\\beifen\\" + fileName + ".zip", path);
         System.out.println("解压完成");
         /**
          * 再从这个ZipFile读取数据
@@ -50,7 +54,8 @@ public class YZJExportService {
         File[] tempList = file.listFiles();
         System.out.println("该目录下对象个数："+tempList.length);
         String[][] datas;
-        File fileCsv = new File("/usr/local/bxdatas/" + fileName + "/" + startDate + "-" + endDate + ".csv" );
+        //File fileCsv = new File("/usr/local/bxdatas/" + fileName + "/" + startDate + "-" + endDate + ".csv" );
+        File fileCsv = new File("D:\\beifen\\" + fileName + "/" + startDate + "-" + endDate + ".csv" );
         int fileLength1 = tempList[0].getName().length();
         int fileLength2 = tempList[1].getName().length();
         if(fileLength1 > fileLength2) {
